@@ -26,5 +26,36 @@ Follow these steps to get your development environment set up:
    ```bash
    git clone git@github.com:DianaUmanzr/customer-service.git
 
-2- Run the application 
-3- 
+2- **Run the application**
+
+3- go to this url in postman and send the json body in the request
+
+POST http://localhost:8080/api/customers
+
+{
+"customerId": 3,
+"firstName": "Maria",
+"lastName": "Jose",
+"email": "john.doe@example.com",
+"phoneNumber": "123-456-7890",
+"address": {
+"street": "1234 Elm St",
+"city": "Springfield",
+"state": "IL",
+"zipCode": "62704"
+}
+}
+
+4- Verify in the h2 memory database in this url:
+
+http://localhost:8080/h2-console/login.jsp
+url: jdbc:h2:mem:testdb
+username: sa
+password:
+
+5- Verify customer table, all the changes realized in the CRUD are reflected in crm_customer table
+
+6- Do the same for DELETE operation sending as a path variable the customer that you want to delete.
+
+DELETE http://localhost:8080/api/customers/1
+
