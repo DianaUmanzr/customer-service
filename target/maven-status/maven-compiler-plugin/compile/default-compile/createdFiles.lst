@@ -1,0 +1,15 @@
+com/flxpoint/customer/controller/CustomerController.class
+com/flxpoint/customer/repository/CustomerRepository.class
+com/flxpoint/customer/exception/CrmCommunicationException.class
+com/flxpoint/customer/config/OpenApiConfig.class
+com/flxpoint/customer/exception/GlobalExceptionHandler.class
+com/flxpoint/customer/model/Customer.class
+com/flxpoint/customer/CustomerServiceApplication.class
+com/flxpoint/customer/config/WebConfig.class
+com/flxpoint/customer/model/Address.class
+com/flxpoint/customer/service/CustomerService.class
+com/flxpoint/customer/exception/InvalidCustomerDataException.class
+com/flxpoint/customer/model/CrmCustomer.class
+com/flxpoint/customer/service/CrmIntegrationService.class
+com/flxpoint/customer/repository/CustomerCRMRepository.class
+com/flxpoint/customer/exception/CustomerNotFoundException.class

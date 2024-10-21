@@ -1,0 +1,33 @@
+resilience4j:
+  retry:
+    instances:
+      crmUpdateRetry:
+        maxRetryAttempts: 5
+        waitDuration: 1000
+        retryExceptions:
+          - java.net.ConnectException
+          - org.springframework.web.client.HttpServerErrorException
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+logging:
+  level:
+    web: DEBUG  # Setting Spring Web logging to DEBUG
+    org:
+      springdoc: DEBUG  # Setting Springdoc logging to DEBUG
+
+
+
